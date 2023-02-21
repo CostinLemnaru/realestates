@@ -244,6 +244,7 @@ ul.menuright li {
     margin-top: 22px;
 }
 
+.locations .slick-prev,
 .properties .slick-prev {
     position: absolute;
     top: 600px;
@@ -256,7 +257,7 @@ ul.menuright li {
 .pHome {
     margin-top: 150px;
 }
-
+.locations .slick-next,
 .properties .slick-next {
     position: absolute;
     top: 600px;
@@ -265,6 +266,10 @@ ul.menuright li {
     border: 0;
 }
 
+.locations .slick-next,
+.locations .slick-prev {
+    top: 715px
+}
 .propertiesslider {
     max-height: 640px;
     overflow-y: hidden;
@@ -625,6 +630,7 @@ ul.menuright li {
 }
 .teamWrap {
     background: #eee;
+    padding-top: 100px;
 }
 
 @media (max-width: 1199px) {

@@ -247,12 +247,40 @@
                 </div>
             </div>
         </div>
+        
+        <div class="location" style="background-image: url('assets/image1.png')">
+            <div class="container">
+                <div class="row">
+                    <div class="col-md-6 location--left">
+                        <div class="row">
+                            <div class="col-xs-12">
+                                <a href="#"><button class="bigButton">More info</button></a>
+                            </div>
+                            <div class="col-xs-12">
+                                <a href="#"><button class="bigButton bigButton--secondary mt-90">Bel Air</button></a>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-md-6 location--right">
+                        <div class="row">
+                            <div class="col-xs-12">
+                                <a href="#"><button class="bigButton bigButton--secondary">Bel Air</button></a>
+                            </div>
+                            <div class="col-xs-12">
+                                <a href="#"><button class="bigButton mt-90">More info</button></a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
     </div>
 
     <!-- team -->
     <div class="teamWrap">
         <div class="container team">
             <div class="row">
+                <div class="col-xs-12 separator"></div>
                 <div class="col-xs-12 col-md-2 member-top">
                     <div class="member" style="background-image: url('assets/member.png');">
                         <h3 class="memberName">Name</h3>
@@ -359,12 +387,14 @@
         $('.logo img').toggleClass('positionAbsolute');
     }
     $('.locations').slick({
-        arrows: false,
+        arrows: true,
         accessibility: false,
         draggable: false,
         infinite: false,
         slidesToShow: 1,
         slidesToScroll: 1,
+        nextArrow: '<button type="button" class="slick-next"><img src="assets/right.png"></button>',
+        prevArrow: '<button type="button" class="slick-prev"><img src="assets/left.png"></button>'
     });
 </script>
 
