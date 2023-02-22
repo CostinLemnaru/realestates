@@ -75,13 +75,31 @@
                         <div class="col-md-12">
                             <div class="buttons">
                                 <div class="buybutton">
-                                    <span class="button__border"><a href="#" class="button__text">Buy</a></span>
-                                    <span class="button__border"><a href="#" class="button__text">Rent</a></span>
+                                    <span class="button__border"><a href="#" class="button__text" onclick="toggleButtons('buy')">Buy</a></span>
+                                    <div class="buybutton__more" style="display: none;">
+                                        <button>School age kids</button>
+                                        <button>Reformas</button>
+                                        <button>Retiring</button>
+                                    </div>
+                                </div>
+                                <div class="buybutton rentbutton">
+                                    <span class="button__border"><a href="#" class="button__text" onclick="toggleButtons('rent')">Rent</a></span>
+                                    <div class="rentbutton__more" style="display: none;">
+                                        <button>School age kids</button>
+                                        <button>Reformas</button>
+                                    </div>
                                 </div>
                                 <div class="aibuttons">
-                                    <span class="button__border"><a href="#" class="button__text">AI-powered Search &
-                                            Help</a></span>
-                                    <span class="button__border"><a href="#" class="button__text">+</a></span>
+                                    <span class="button__border"><a href="#" class="button__text">AI-powered Search & Help</a></span>
+                                    <span class="button__border"><a href="#" class="button__text" onclick="toggleButtons('ai')">+</a></span>
+                                    <div class="aibuttons__more" style="display: none;">
+                                        <button>School age kids</button>
+                                        <button>Reformas</button>
+                                        <button>Retiring</button>
+                                        <button>Existing</button>
+                                        <button>School age kids</button>
+                                        <button>Reformas</button>
+                                    </div>
                                 </div>
                             </div>
                             <span class="slide__text">Your new Honest View real estate experience</span>
@@ -224,7 +242,7 @@
         <div class="location" style="background-image: url('assets/image1.png')">
             <div class="container">
                 <div class="row">
-                    <div class="col-md-6 location--left">
+                    <div class="col-xs-6 location--left">
                         <div class="row">
                             <div class="col-xs-12">
                                 <a href="#"><button class="bigButton">More info</button></a>
@@ -234,7 +252,7 @@
                             </div>
                         </div>
                     </div>
-                    <div class="col-md-6 location--right">
+                    <div class="col-xs-6 location--right">
                         <div class="row">
                             <div class="col-xs-12">
                                 <a href="#"><button class="bigButton bigButton--secondary">Bel Air</button></a>
@@ -251,7 +269,7 @@
         <div class="location" style="background-image: url('assets/image1.png')">
             <div class="container">
                 <div class="row">
-                    <div class="col-md-6 location--left">
+                    <div class="col-xs-6 location--left">
                         <div class="row">
                             <div class="col-xs-12">
                                 <a href="#"><button class="bigButton">More info</button></a>
@@ -261,7 +279,7 @@
                             </div>
                         </div>
                     </div>
-                    <div class="col-md-6 location--right">
+                    <div class="col-xs-6 location--right">
                         <div class="row">
                             <div class="col-xs-12">
                                 <a href="#"><button class="bigButton bigButton--secondary">Bel Air</button></a>
@@ -281,34 +299,40 @@
         <div class="container team">
             <div class="row">
                 <div class="col-xs-12 separator"></div>
-                <div class="col-xs-12 col-md-2 member-top">
-                    <div class="member" style="background-image: url('assets/member.png');">
-                        <h3 class="memberName">Name</h3>
-                        <p class="memberPosition">Designation</p>
-                    </div>
-                </div>
-                <div class="col-xs-12 col-md-2 member-bottom">
-                    <div class="member member2" style="background-image: url('assets/member2.png');">
-                        <h3 class="memberName">Name</h3>
-                        <p class="memberPosition">Designation</p>
-                    </div>
-                </div>
-                <div class="col-xs-12 col-md-2 member-top">
-                    <div class="member" style="background-image: url('assets/member.png');">
-                        <h3 class="memberName">Name</h3>
-                        <p class="memberPosition">Designation</p>
-                    </div>
-                </div>
-                <div class="col-xs-12 col-md-2 member-bottom">
-                    <div class="member member2" style="background-image: url('assets/member2.png');">
-                        <h3 class="memberName">Name</h3>
-                        <p class="memberPosition">Designation</p>
-                    </div>
-                </div>
-                <div class="col-xs-12 col-md-4 teamDescription">
+            </div>
+            <div class="row">
+                <div class="col-xs-12 col-lg-4 col-lg-push-8 teamDescription">
                     <div>
                         <h1>Meet the Team</h1>
                         <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</p>
+                    </div>
+                </div>
+                <div class="col-xs-12 col-lg-2 col-lg-pull-4 member-top">
+                    <div class="member" style="background-image: url('assets/member.png');">
+                        <img src="assets/memberMobile.png" alt="">
+                        <h3 class="memberName">Name</h3>
+                        <p class="memberPosition">Designation</p>
+                    </div>
+                </div>
+                <div class="col-xs-12 col-lg-2 col-lg-pull-4 member-bottom">
+                    <div class="member member2" style="background-image: url('assets/member2.png');">
+                        <img src="assets/memberMobile.png" alt="">
+                        <h3 class="memberName">Name</h3>
+                        <p class="memberPosition">Designation</p>
+                    </div>
+                </div>
+                <div class="col-xs-12 col-lg-2 col-lg-pull-4 member-top">
+                    <div class="member" style="background-image: url('assets/member.png');">
+                        <img src="assets/memberMobile.png" alt="">
+                        <h3 class="memberName">Name</h3>
+                        <p class="memberPosition">Designation</p>
+                    </div>
+                </div>
+                <div class="col-xs-12 col-lg-2 col-lg-pull-4 member-bottom">
+                    <div class="member member2" style="background-image: url('assets/member2.png');">
+                        <img src="assets/memberMobile.png" alt="">
+                        <h3 class="memberName">Name</h3>
+                        <p class="memberPosition">Designation</p>
                     </div>
                 </div>
             </div>
@@ -385,6 +409,19 @@
     function toggleMenu() {
         $('.toggleMenu').toggle();
         $('.logo img').toggleClass('positionAbsolute');
+    }
+    function toggleButtons(div) {
+        $('.buybutton__more, .rentbutton__more, .aibuttons__more').hide();
+
+        if (div == 'buy') {
+            $('.buybutton__more').show();
+        }
+        if (div == 'rent') {
+            $('.rentbutton__more').show();
+        }
+        if (div == 'ai') {
+            $('.aibuttons__more').show();
+        }
     }
     $('.locations').slick({
         arrows: true,

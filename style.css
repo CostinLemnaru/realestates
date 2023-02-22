@@ -433,9 +433,13 @@ ul.menuright li {
 .slide .button {
     display: inline-block;
 }
-
+.aibuttons {
+    position: relative
+}
 .aibuttons .button__border:first-child {
     display: block;
+    width: 198px;
+    margin: 0 auto;
     margin-bottom: 10px;
 }
 
@@ -446,8 +450,11 @@ ul.menuright li {
 
 .buybutton {
     display: inline-block;
-    top: -43px;
     position: inherit;
+    position: relative;
+}
+.rentbutton {
+    margin-right: 50px;
 }
 
 .hamburger {
@@ -483,6 +490,12 @@ ul.menuright li {
     width: 100%;
     border: none;
     border-radius: 3px;
+}
+.filter__button--secondary {
+    background: #ffffff;
+    border: 1px solid #c7c7c7;
+    height: 40px;
+    color: #999;
 }
 
 .listing {
@@ -632,6 +645,39 @@ ul.menuright li {
     background: #eee;
     padding-top: 100px;
 }
+.member img {
+    display: none;
+}
+.aibuttons__more {
+    width: 280px;
+    position: absolute;
+    padding-top: 15px;
+    left: -40px;
+}
+.buybutton button,
+.rentbutton button,
+.aibuttons__more button {
+    width: 130px;
+    margin: 2px;
+    background: #e7b35f;
+    border: none;
+    color: #FFF;
+    padding: 4px 0;
+    line-height: 15px;
+    height: 30px;
+    text-transform: uppercase;
+    font-size: 12px;
+}
+.buybutton__more,
+.rentbutton__more {
+    position: absolute;
+    padding-top: 20px;
+    width: 200px;
+    left: -60px;
+}
+.mshow {
+    display: none;
+}
 
 @media (max-width: 1199px) {
     .menu ul {
@@ -759,5 +805,42 @@ ul.menuright li {
 
     .page .title:first-child {
         margin-top: 100px;
+    }
+    .member {
+        background: none !important;
+        height: auto;
+    }
+    .member2 {
+        margin-top: 0;
+        padding-top: 0;
+    }
+    .member img {
+        display: inline-block;
+        border-radius: 100%;
+    }
+    .teamDescription {
+        background: none;
+        padding-top: 0;
+        text-align: center;
+        height: auto;
+        margin-top: 30px;
+        margin-bottom: 30px;
+    }
+    .teamDescription div {
+        width: 100%;
+    }
+    .footerBorderUp {
+        margin-top: 50px;
+    }
+}
+@media (max-width: 991px) {
+    .mhide {
+        display: none;
+    }
+    .mshow {
+        display: block;
+    }
+    .moreFilters .mhide {
+        display: block;
     }
 }

@@ -94,11 +94,17 @@
                                 <option value="">Property Type</option>
                             </select>
                         </div>
+                        <div class="mshow">
+                            <div class="row">
+                                <div class="col-xs-12 moreFilters" data-filters="0"></div>
+                            </div>
+                        </div>
                         <div class="col-xs-12 col-md-1">
+                            <button class="filter__button filter__button--secondary fontBodr mshow" onclick="moreFilters()">show more filters</button>
                             <button class="filter__button fontBodr">Search</button>
                         </div>
                     </div>
-                    <div class="row filters">
+                    <div class="row filters filters__second mhide">
                         <div class="col-xs-12 col-md-3">
                             <select class="filters__input">
                                 <option value="">Minimum Price</option>
@@ -120,7 +126,7 @@
                             </select>
                         </div>
                     </div>
-                    <div class="row filters">
+                    <div class="row filters filters__third mhide">
                         <div class="col-xs-12 col-md-3">
                             <select class="filters__input">
                                 <option value="">Number of Bedrooms</option>
@@ -267,6 +273,18 @@
             function toggleMenu() {
                 $('.toggleMenu').toggle();
                 $('.logo img').toggleClass('positionAbsolute');
+            }
+            function moreFilters() {
+                var countFilters = $('.moreFilters').attr('data-filters');
+                if (countFilters == 0) {
+                    var filters = $('.filters__second').detach();
+                    $('.moreFilters').attr('data-filters', 1);
+                }
+                if (countFilters == 1) {
+                    var filters = $('.filters__third').detach();
+                    $('.moreFilters').attr('data-filters', 2);
+                }
+                $('.moreFilters').append(filters);
             }
         </script>
 </body>
