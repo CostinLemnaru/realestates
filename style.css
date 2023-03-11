@@ -36,6 +36,9 @@
 body {
     background: #eeeeee !important;
 }
+body.honestviewpage {
+    background: #e9dcc5 !important;
+}
 
 .fontBodr {
     font-family: BOD_R;
@@ -49,7 +52,9 @@ body {
     height: 100vh;
     background: #afafaf;
 }
-
+.honestviewpage .head {
+    height: initial;
+}
 .header {
     height: 140px;
     background: black;
@@ -314,6 +319,9 @@ ul.menuright li {
 .separator {
     background: #deb876;
     background: linear-gradient(90deg, rgb(255 255 255) 0%, rgb(90, 67, 26) 50%, rgb(255 255 255) 100%);
+}
+.separator--hv {
+    background: linear-gradient(90deg, rgb(233 220 197) 0%, rgb(90, 67, 26) 50%, rgb(233 220 197) 100%);
 }
 .bigButton {
     font-family: BOD_R;
@@ -845,6 +853,96 @@ ul.menuright li {
 .mapArea iframe {
     width: 100%;
 }
+.decoratedTitle {
+    text-align: center;
+    font-size: 80px;
+    line-height: 143px;
+    margin: 0;
+    color: #8e764b;
+    margin-bottom: 100px;
+}
+.decoratedTitle::before {
+    content: url(assets/titledecorationleft.png);
+    position: relative;
+    left: 63px;
+}
+.decoratedTitle::after {
+    content: url(assets/titledecorationright.png);
+    top: 50px;
+    position: relative;
+    right: 71px;
+}
+.honestviewHeader p {
+    text-align: center;
+    font-size: 36px;
+    color: #000;
+    line-height: 44px;
+    margin-bottom: 100px;
+}
+.hvtitle h3 {
+    text-align: center;
+    font-size: 36px;
+    margin: 70px 0;
+}
+.hvtitle h3 span {
+    background: #eee7dc;
+    border: 1px solid #deb976;
+    padding: 3px 5px;
+    line-height: 50px;
+}
+.hvProperty {
+    height: 500px;
+    background-repeat: no-repeat;
+    background-size: cover;
+    border: 1px solid;
+}
+.hvbtn {
+    background-image: url(assets/hvbtn.png);
+    width: 100px;
+    height: 57px;
+    border: 0;
+    margin-top: 20px;
+    margin-left: 20px;
+    background-size: 80% 71%;
+    background-repeat: no-repeat;
+    background-position: 10px 10px;
+}
+.hvproperties {
+    margin-bottom: 100px;
+}
+.hvfeedbacks,
+.hvfeedback {
+    margin-bottom: 50px;
+}
+.hvfeedbackprofile {
+    text-align: center;
+    border-right: 5px solid #bfa477;
+}
+.hvfeedbackprofile img {
+    display: block;
+    margin: 0 auto;
+}
+.hvfeedbackprofile h6 {
+    font-size: 24px;
+    margin-top: 20px;
+    margin-bottom: 0;
+}
+.hvfeedbackdate {
+    font-size: 16px;
+}
+.hvfeedbacktext h3 {
+    margin-top: 5px;
+}
+.hvfeedbacktext p {
+    margin-top: 20px;
+    margin-bottom: 20px;
+}
+.hvfeedbackpics img {
+    width: 100px;
+    height: auto;
+    border: 1px solid;
+    margin-right: 10px;
+}
 
 @media (max-width: 1199px) {
     .menu ul {
@@ -1015,5 +1113,29 @@ ul.menuright li {
     }
     .moreFilters .mhide {
         display: block;
+    }
+    .decoratedTitle::after,
+    .decoratedTitle::before {
+        content: "";
+    }
+    .hvproperty {
+        margin-bottom: 20px;
+    }
+    .hvfeedbackprofile {
+        border: 0;
+    }
+    .decoratedTitle {
+        font-size: 50px;
+        margin: 0;
+        margin-bottom: 50px;
+        line-height: 50px;
+    }
+    .honestviewHeader p {
+        font-size: 24px;
+        line-height: 30px;
+        margin-bottom: 40px;
+    }
+    .hvfeedbacktext {
+        text-align: center;
     }
 }
